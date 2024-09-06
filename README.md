@@ -1,15 +1,15 @@
 # Next.js Hero Section Web Template
-![CleanShot](/public/Shot.webp)
+![Shot](/public/shot.webp)
 
 A modern, responsive Next.js template featuring eye-catching designs, multiple layouts, and unique animations. Perfect for creating stunning hero sections for your web projects in 2024 and beyond.
+
+This template may have its flaws. I’m a designer and haven’t been programming for long, so I appreciate your understanding if the structure isn’t clear or if there are coding mistakes. However, what’s important is that I’ve achieved some great animation effects, which I believe is the value designers bring, as we are more sensitive to graphical details. You are free to adjust it however you like, and with AI’s help, I’m sure you’ll be able to quickly incorporate this template into your project! Thank you for your support and understanding!
 
 ## Features
 
 - Responsive design
 - Dynamic animations using Framer Motion
 - Custom UI components
-- Theme provider for dark mode support
-- Optimized font loading with next/font
 
 ## Installation
 
