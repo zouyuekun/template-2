@@ -29,10 +29,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-wrap gap-3 mb-12">
-            <Button className="w-[183px] h-[59px] bg-black rounded-xl flex items-center justify-center">
+            <Button className="w-[183px] h-[59px] text-base font-bold bg-black rounded-xl flex items-center justify-center">
               Get Started
             </Button>
-            <Button variant="outline" className="w-[183px] h-[59px] rounded-xl flex items-center justify-center">
+            <Button variant="outline" className="w-[183px] h-[59px] text-base font-bold rounded-xl flex items-center justify-center">
               Explore
             </Button>
           </div>
@@ -50,34 +50,34 @@ export default function Home() {
         </div>
 
         {/* 右半部分内容 */}
-        <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-3xl h-[700px]">
+        <div className="lg:w-1/2 w-full mt-8 lg:mt-0 flex justify-center lg:justify-end">
+          <div className="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-3xl h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] -ml-12 sm:-ml-8 md:-ml-4 lg:ml-0">
             <Card
               src="/card1.webp"
               alt="Hero image"
               width={490}
               height={259}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[196px] sm:w-[294px] md:w-[392px] lg:w-[490px]"
               isVisible={isVisible}
-              initialTransform="translate(-30%, -100%) rotate(8deg)"
+              initialTransform="translate(-40%, -110%) rotate(8deg)"
             />
             <Card
               src="/card2.webp"
               alt="Hero image"
               width={294}
               height={305}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[118px] sm:w-[176px] md:w-[235px] lg:w-[294px]"
               isVisible={isVisible}
-              initialTransform="translate(-70%, -20%) rotate(-8deg)"
+              initialTransform="translate(-90%, -30%) rotate(-8deg)"
             />
             <Card
               src="/card3.webp"
               alt="Hero image"
               width={274}
               height={305}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] sm:w-[164px] md:w-[219px] lg:w-[274px]"
               isVisible={isVisible}
-              initialTransform="translate(10%, 15%) rotate(16deg)"
+              initialTransform="translate(-10%, 10%) rotate(16deg)"
             />
           </div>
         </div>

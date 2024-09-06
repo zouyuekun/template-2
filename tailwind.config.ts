@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+
+		fontFamily: {
+			poppins: ['Poppins', 'Arial', 'Helvetica',],
+		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
