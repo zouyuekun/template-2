@@ -10,37 +10,39 @@ interface CardProps {
   height: number;
   className?: string;
   isVisible?: boolean;
+  initialTransform?: string;
 }
 
-export default function Card({ src, alt, width, height, className = "", isVisible = false }: CardProps) {
+export default function Card({ src, alt, width, height, className = "", isVisible = false, initialTransform = "" }: CardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [style, setStyle] = useState({});
 
   useEffect(() => {
-    const rotateClass = className.match(/rotate\([^)]+\)/);
-    const baseRotation = rotateClass ? rotateClass[0] : 'rotate(0deg)';
+    const rotateMatch = initialTransform.match(/rotate\([^)]+\)/);
+    const baseRotation = rotateMatch ? rotateMatch[0] : '';
+    const translatePart = initialTransform.replace(baseRotation, '').trim();
 
     const baseStyle = {
       width: `${width}px`,
       height: `${height}px`,
-      transition: 'opacity 0.6s ease-out, transform 0.6s ease-out',
+      transition: 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
       opacity: isVisible ? 1 : 0,
-      transform: `translateY(${isVisible ? '0' : '30px'}) ${baseRotation}`,
+      transform: `${translatePart} ${baseRotation} scale(${isVisible ? 1 : 0.8})`,
     };
     
     const hoverStyle = isHovered
       ? { 
-          transform: `translateY(-15px) ${baseRotation} rotate(5deg)`,
-          transition: 'all 0.3s ease-out',
+          transform: `${translatePart} rotate(0deg) scale(1.05)`,
+          transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
         }
       : {};
 
     setStyle({ ...baseStyle, ...hoverStyle });
-  }, [isHovered, isVisible, width, height, className]);
+  }, [isHovered, isVisible, width, height, className, initialTransform]);
 
   return (
     <div
-      className={`absolute shadow-[0_15px_50px_rgba(160,54,83,0.1)] rounded-2xl border border-[#e4839b]/20 ${className}`}
+      className={`absolute shadow-[0_15px_50px_rgba(160,54,83,0.1)] rounded-3xl border border-[#e4839b]/20 overflow-hidden ${className}`}
       style={style}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -50,7 +52,6 @@ export default function Card({ src, alt, width, height, className = "", isVisibl
         alt={alt}
         layout="fill"
         objectFit="cover"
-        className="rounded-3xl"
       />
     </div>
   );

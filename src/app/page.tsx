@@ -7,20 +7,11 @@ import Card from "@/components/Card";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [isVisible1, setIsVisible1] = useState(false);
-  const [isVisible2, setIsVisible2] = useState(false);
-  const [isVisible3, setIsVisible3] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setIsVisible1(true), 100);
-    const timer2 = setTimeout(() => setIsVisible2(true), 300);
-    const timer3 = setTimeout(() => setIsVisible3(true), 500);
-
-    return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-    };
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -28,7 +19,7 @@ export default function Home() {
       <DotPattern className="z-0" />
       <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center rounded-xl p-8 relative z-10">
         {/* 左半部分内容 */}
-        <div className="max-w-3xl mx-auto lg:mx-0 lg:w-3/5">
+        <div className="max-w-3xl mx-auto lg:mx-0 lg:w-1/2">
           <h1 className="text-black text-4xl sm:text-5xl lg:text-[64px] font-bold font-['Poppins'] leading-tight mb-8">
             Next.js hero section<br/>Phone Template
           </h1>
@@ -59,31 +50,34 @@ export default function Home() {
         </div>
 
         {/* 右半部分内容 */}
-        <div className="lg:w-2/5 mt-8 lg:mt-0 flex justify-center lg:justify-end">
+        <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center lg:justify-end">
           <div className="relative w-full max-w-3xl h-[700px]">
             <Card
               src="/card1.webp"
               alt="Hero image"
               width={490}
               height={259}
-              className="absolute bottom-[360px] left-[72px] rotate-[8deg]"
-              isVisible={isVisible1}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              isVisible={isVisible}
+              initialTransform="translate(-30%, -100%) rotate(8deg)"
             />
             <Card
               src="/card2.webp"
               alt="Hero image"
               width={294}
               height={305}
-              className="absolute bottom-[120px] left-[26px] rotate-[-8deg]"
-              isVisible={isVisible2}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              isVisible={isVisible}
+              initialTransform="translate(-70%, -20%) rotate(-8deg)"
             />
             <Card
               src="/card3.webp"
               alt="Hero image"
               width={274}
               height={305}
-              className="absolute bottom-[0px] left-[271px] rotate-[16deg]"
-              isVisible={isVisible3}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              isVisible={isVisible}
+              initialTransform="translate(10%, 15%) rotate(16deg)"
             />
           </div>
         </div>
