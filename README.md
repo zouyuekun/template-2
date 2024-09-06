@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Hero Section Web Template
+![CleanShot](/public/Shot.webp)
 
-## Getting Started
+A modern, responsive Next.js template featuring eye-catching designs, multiple layouts, and unique animations. Perfect for creating stunning hero sections for your web projects in 2024 and beyond.
 
-First, run the development server:
+## Features
 
-```bash
+- Responsive design
+- Dynamic animations using Framer Motion
+- Custom UI components
+- Theme provider for dark mode support
+- Optimized font loading with next/font
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/zouyuekun/template-2.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd template-2
+   ```
+
+3. Install dependencies:
+   ```
+   npm install
+   ```
+
+## Usage
+
+Run the development server:
+
+bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+This project uses Next.js 13+ with the App Router. Make sure your `next.config.js` is set up correctly for your needs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js: ^13.0.0
+- React: ^18.0.0
+- Framer Motion: ^10.0.0
+- Tailwind CSS: ^3.0.0
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For a full list of dependencies, please refer to the `package.json` file.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Authors
+
+- yuekun - Initial work - [zouyuekun](https://github.com/zouyuekun)
+
+## Acknowledgments
+
+- Next.js team for the amazing framework
+- Framer Motion for the powerful animation library
+- Magic UI for the beautiful UI components
+- Shadcn UI for the responsive UI components
+- All contributors who have helped shape this template
