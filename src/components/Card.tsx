@@ -23,9 +23,8 @@ export default function Card({ src, alt, width, height, className = "", isVisibl
     const translatePart = initialTransform.replace(baseRotation, '').trim();
 
     const baseStyle = {
-      width: `${width}px`,
-      height: `${height}px`,
-      transition: 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+      aspectRatio: `${width} / ${height}`,
+      transition: 'opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1)',
       opacity: isVisible ? 1 : 0,
       transform: `${translatePart} ${baseRotation} scale(${isVisible ? 1 : 0.8})`,
     };
@@ -42,7 +41,7 @@ export default function Card({ src, alt, width, height, className = "", isVisibl
 
   return (
     <div
-      className={`absolute shadow-[0_15px_50px_rgba(160,54,83,0.1)] rounded-3xl border border-[#e4839b]/20 overflow-hidden ${className}`}
+      className={`absolute shadow-[0_15px_50px_rgba(160,54,83,0.1)] rounded-[1.5rem] sm:rounded-3xl border border-[#e4839b]/20 overflow-hidden ${className}`}
       style={style}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
