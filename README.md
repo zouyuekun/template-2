@@ -55,6 +55,13 @@ This project uses Next.js 13+ with the App Router. Make sure your `next.config.j
 
 For a full list of dependencies, please refer to the `package.json` file.
 
+## Support the Project
+
+If you find this project helpful, consider buying me a coffee ☕️
+
+https://buymeacoffee.com/yuekun
+
+
 ## License
 
 This project is licensed under the MIT License.
